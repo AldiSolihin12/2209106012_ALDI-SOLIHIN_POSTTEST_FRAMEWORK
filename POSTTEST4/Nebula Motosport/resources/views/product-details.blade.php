@@ -22,7 +22,7 @@
 
         {{-- 📝 Description --}}
         <p class="text-gray-600 leading-relaxed">
-            {{ $product->description }}
+            {{ $product->details->description}}
         </p>
 
         {{-- ⚙️ Product Details --}}
@@ -30,7 +30,7 @@
         <div class="grid grid-cols-2 gap-6 text-sm">
             <div>
                 <p class="font-semibold text-gray-800">Engine</p>
-                <p class="text-gray-600">{{ $product->details->engine ?? '-' }}</p>
+                <p class="text-gray-600">{{ $product->details->engine_type ?? '-' }}</p>
             </div>
             <div>
                 <p class="font-semibold text-gray-800">Capacity</p>
@@ -61,7 +61,7 @@
         {{-- 💰 Price --}}
         <div class="flex items-center gap-4">
             <p class="text-3xl font-bold text-indigo-600">
-                Rp{{ number_format($product->price, 0, ',', '.') }}
+                ${{ number_format($product->price, 0, ',', '.') }}
             </p>
         </div>
 

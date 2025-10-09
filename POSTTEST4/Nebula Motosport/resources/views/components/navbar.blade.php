@@ -1,7 +1,7 @@
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center min-w-max">
 
-        <a href="#home" class="flex items-center select-none">
+        <a href="{{ route('welcome') }}#" class="flex items-center select-none">
             <img src="{{ asset('images/logo.png') }}" alt="Nebula Motosport Logo" class="h-12 w-auto block">
         </a>
 
